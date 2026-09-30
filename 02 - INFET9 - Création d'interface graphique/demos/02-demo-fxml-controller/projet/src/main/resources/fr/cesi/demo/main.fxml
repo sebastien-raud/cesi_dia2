@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.cesi.demo.MainController"
+      spacing="10"
+      style="-fx-padding: 20;">
+    <Label fx:id="messageLabel" text="Bonjour" />
+    <Button text="Cliquer" onAction="#handleClick" />
+</VBox>
