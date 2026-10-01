@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.cesi.demo.MainController">
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Nom" />
+            <TableColumn fx:id="priceColumn" text="Prix" />
+        </columns>
+    </TableView>
+</VBox>
