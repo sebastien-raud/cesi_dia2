@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.cesi.invoicing.InvoiceTableController"
+      spacing="8"
+      style="-fx-padding: 10;">
+    <HBox spacing="8">
+        <TextField fx:id="searchField" promptText="Rechercher un client..." />
+        <DatePicker fx:id="fromDateField" promptText="Depuis le..." />
+    </HBox>
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="numberColumn" text="Numéro" />
+            <TableColumn fx:id="dateColumn" text="Date" />
+            <TableColumn fx:id="clientColumn" text="Client" />
+            <TableColumn fx:id="totalColumn" text="Total" />
+        </columns>
+    </TableView>
+    <Label text="Double-cliquer sur une ligne pour voir le détail." style="-fx-font-size: 11px; -fx-text-fill: gray;" />
+    <Button text="Retour au menu" onAction="#handleBackToMenu" />
+</VBox>
