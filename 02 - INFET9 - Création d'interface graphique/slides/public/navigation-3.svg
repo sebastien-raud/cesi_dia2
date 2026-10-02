@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="system-ui, sans-serif">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <rect x="60" y="30" width="680" height="390" rx="12" fill="#f4f6fb" stroke="#2544b8" stroke-width="3"/>
+  <rect x="60" y="30" width="680" height="56" rx="12" fill="#2544b8"/>
+  <rect x="60" y="70" width="680" height="16" fill="#2544b8"/>
+  <text x="80" y="66" fill="#fff" font-size="18" font-weight="700">MenuBar (top) : toujours affichée</text>
+  <text x="560" y="66" fill="#fff" font-size="18">Facture ▾</text>
+  <rect x="90" y="110" width="620" height="285" rx="10" fill="#fff" stroke="#e8912a" stroke-width="4"/>
+  <text x="110" y="142" fill="#e8912a" font-size="18" font-weight="700">center : tableau (setCenter)</text>
+  <text x="130" y="190" fill="#16203a" font-size="16" font-weight="700">N°</text>
+  <text x="300" y="190" fill="#16203a" font-size="16" font-weight="700">Client</text>
+  <text x="540" y="190" fill="#16203a" font-size="16" font-weight="700">Montant</text>
+  <text x="130" y="234" fill="#16203a" font-size="16" font-weight="400">F-2026-001</text>
+  <text x="300" y="234" fill="#16203a" font-size="16" font-weight="400">Sébastien Général</text>
+  <text x="540" y="234" fill="#16203a" font-size="16" font-weight="400">149,90 €</text>
+  <text x="130" y="278" fill="#16203a" font-size="16" font-weight="400">F-2026-002</text>
+  <text x="300" y="278" fill="#16203a" font-size="16" font-weight="400">Atelier Durand</text>
+  <text x="540" y="278" fill="#16203a" font-size="16" font-weight="400">320,00 €</text>
+  <text x="130" y="322" fill="#16203a" font-size="16" font-weight="400">F-2026-003</text>
+  <text x="300" y="322" fill="#16203a" font-size="16" font-weight="400">Café du Port</text>
+  <text x="540" y="322" fill="#16203a" font-size="16" font-weight="400">58,50 €</text>
+  <line x1="120" y1="200" x2="680" y2="200" stroke="#dce1ec"/>
+  <line x1="120" y1="244" x2="680" y2="244" stroke="#dce1ec"/>
+  <line x1="120" y1="288" x2="680" y2="288" stroke="#dce1ec"/>
+  <line x1="120" y1="332" x2="680" y2="332" stroke="#dce1ec"/>
+</svg>

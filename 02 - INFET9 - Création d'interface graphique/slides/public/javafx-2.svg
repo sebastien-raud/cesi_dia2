@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="system-ui, sans-serif">
+  <rect width="800" height="450" fill="#ffffff"/>
+  <rect x="60" y="30" width="680" height="390" rx="12" fill="#f4f6fb" stroke="#2544b8" stroke-width="3"/>
+  <rect x="60" y="30" width="680" height="40" rx="12" fill="#2544b8"/>
+  <rect x="60" y="56" width="680" height="14" fill="#2544b8"/>
+  <text x="80" y="57" fill="#fff" font-size="18" font-weight="700">Stage : la fenêtre</text>
+  <rect x="90" y="95" width="620" height="300" rx="10" fill="#fff" stroke="#e8912a" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="110" y="125" fill="#b0660a" font-size="18" font-weight="700">Scene : le contenu affiché</text>
+</svg>
