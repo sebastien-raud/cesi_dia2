@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.cesi.demo.MainController"
+      spacing="8"
+      style="-fx-padding: 20;">
+    <TextField fx:id="searchField" promptText="Rechercher..." />
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="firstNameColumn" text="Prénom" />
+        </columns>
+    </TableView>
+</VBox>

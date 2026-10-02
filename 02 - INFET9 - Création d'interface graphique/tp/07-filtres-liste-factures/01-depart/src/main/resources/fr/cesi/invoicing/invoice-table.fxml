@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.cesi.invoicing.InvoiceTableController">
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="numberColumn" text="Numéro" />
+            <TableColumn fx:id="dateColumn" text="Date" />
+            <TableColumn fx:id="clientColumn" text="Client" />
+            <TableColumn fx:id="totalColumn" text="Total" />
+        </columns>
+    </TableView>
+</VBox>
