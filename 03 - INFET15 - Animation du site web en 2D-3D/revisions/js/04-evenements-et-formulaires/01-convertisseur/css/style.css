@@ -1,0 +1,80 @@
+/* Convertisseur de températures
+ * Fichier fourni, rien à modifier.
+ * Le thermomètre (bonus) : la hauteur de .mercury est à 0 au départ ;
+ * la transition anime chaque changement de hauteur.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em 3em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+label {
+    font-weight: bold;
+}
+
+label:not(:first-child) {
+    margin-top: 1em;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 0.4em;
+    width: 8em;
+}
+
+.thermometer {
+    position: relative;
+    width: 24px;
+    height: 200px;
+    border: 3px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #EEE;
+}
+
+.mercury {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #E53935;
+    transition: height 0.3s;
+}

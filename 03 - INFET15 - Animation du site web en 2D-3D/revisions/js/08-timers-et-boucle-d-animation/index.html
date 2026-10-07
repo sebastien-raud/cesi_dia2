@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les balles rebondissantes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Les balles rebondissantes</h1>
+        <p>Des minuteries, une boucle d'animation… et des balles qui rebondissent partout.</p>
+    </header>
+
+    <main>
+        <div class="panel">
+            <p id="message">Clique sur « Lancer »</p>
+            <p>Chrono : <span id="chrono">0.0</span> s</p>
+        </div>
+
+        <!-- l'arène : les balles s'y déplacent avec transform: translate(x, y) -->
+        <div id="arena" class="arena">
+            <div id="ball" class="ball"></div>
+        </div>
+
+        <div class="controls">
+            <button id="start-button">Lancer</button>
+            <button id="pause-button" disabled>Pause</button>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi CSS 04 : le menu burger (résultat attendu)</title>
+    <link rel="stylesheet" href="correction.css">
+    <style>.target-banner { position: fixed; bottom: 0; left: 0; right: 0; padding: .4rem; text-align: center; font: bold .9rem sans-serif; color: #fff; background: #B10DC9; z-index: 10; }</style>
+</head>
+<body>
+    <p class="target-banner">Résultat attendu</p>
+
+    <header class="header">
+        <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <span class="logo">Mon site</span>
+
+        <nav id="menu" class="menu" aria-label="Menu principal">
+            <a href="#">Accueil</a>
+            <a href="#">Projets</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Clique sur le burger, en haut à gauche.</p>
+    </main>
+
+    <!-- le JavaScript est fourni : il ajoute ou retire la classe menu-open sur l'en-tête -->
+    <script>
+        const header = document.querySelector('.header');
+        const burger = document.querySelector('.burger');
+        burger.addEventListener('click', () => {
+            const isOpen = header.classList.toggle('menu-open');
+            burger.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+
+</body>
+</html>

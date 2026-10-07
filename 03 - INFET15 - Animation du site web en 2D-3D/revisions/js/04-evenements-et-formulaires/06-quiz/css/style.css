@@ -1,0 +1,77 @@
+/* Le quiz
+ * Fichier fourni, rien à modifier.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 28em;
+    padding: 2em 3em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+#progress {
+    color: #6C757D;
+    margin-bottom: 0.3em;
+}
+
+#question {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    gap: 0.8em;
+}
+
+/* display: flex ci-dessus l'emporterait sur l'attribut hidden : on le rétablit */
+form[hidden] {
+    display: none;
+}
+
+input {
+    flex: 1;
+    font-size: 1.1em;
+    padding: 0.4em;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.4em 1em;
+}
+
+#feedback {
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+#best {
+    color: #6C757D;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}

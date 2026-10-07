@@ -1,0 +1,75 @@
+/* Le poème dans le désordre
+ * Fichier fourni, rien à modifier.
+ */
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 2em 1em;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 2em 3em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+.verses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.verse {
+    cursor: pointer;
+    font-size: 1em;
+    text-align: left;
+    padding: 0.6em 1em;
+    border: 1px solid #CED4DA;
+    border-radius: 6px;
+    background-color: #FFF;
+}
+
+.verse:hover {
+    background-color: #E7F1FF;
+}
+
+/* un vers déjà placé : grisé, plus cliquable */
+.verse:disabled {
+    cursor: default;
+    color: #ADB5BD;
+    background-color: #F1F3F5;
+}
+
+/* le poème reconstitué : chaque \n passe à la ligne */
+#poem {
+    white-space: pre-line;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+    min-height: 1.6em;
+    margin: 1.5em 0 0;
+    padding: 1em;
+    border-left: 4px solid #0D6EFD;
+    background-color: #F8F9FA;
+}
+
+#message {
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+#restart {
+    cursor: pointer;
+    padding: 0.5em 1em;
+}

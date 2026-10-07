@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob, le petit monstre</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blob, le petit monstre</h1>
+        <p>Donne vie à Blob en JavaScript : toutes ses animations sont déjà prêtes dans le CSS.</p>
+    </header>
+
+    <main>
+        <!-- la scène : Blob est dans un conteneur, qui sert à le déplacer (étape 12) -->
+        <div class="stage">
+            <div class="blob-wrapper">
+                <div id="blob" class="blob" role="img" aria-label="Blob, un petit monstre tout rond">
+                    <span class="eye left"></span>
+                    <span class="eye right"></span>
+                    <span class="mouth"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="color-button">Couleur</button>
+            <button id="jump-button">Saute</button>
+            <button id="dance-button">Danse</button>
+            <button id="sleep-button">Dors</button>
+            <button id="surprise-button">Surprise</button>
+            <button id="shy-button">Timide : non</button>
+        </div>
+
+        <div class="speed">
+            <label for="speed">Vitesse des animations</label>
+            <input type="range" id="speed" min="0.3" max="3" step="0.1" value="1">
+            <span id="speed-value">1 s</span>
+        </div>
+
+        <p id="reduced-motion-message" class="hidden">
+            Ton système demande de réduire les animations : Blob reste donc immobile.
+        </p>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

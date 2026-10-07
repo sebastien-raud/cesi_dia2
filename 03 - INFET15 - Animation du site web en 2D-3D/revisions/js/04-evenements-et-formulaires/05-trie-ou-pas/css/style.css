@@ -1,0 +1,69 @@
+/* Trié ou pas ?
+ * Fichier fourni, rien à modifier.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 26em;
+    padding: 2em 3em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    font-size: 1.1em;
+    padding: 0.3em;
+    width: 6em;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.4em 1em;
+}
+
+#numbers {
+    font-family: monospace;
+    font-size: 1.4em;
+    margin: 1.2em 0 0;
+    padding: 0.6em;
+    background-color: #F1F3F5;
+    border-radius: 6px;
+}
+
+#status {
+    font-weight: bold;
+    min-height: 1.2em;
+}

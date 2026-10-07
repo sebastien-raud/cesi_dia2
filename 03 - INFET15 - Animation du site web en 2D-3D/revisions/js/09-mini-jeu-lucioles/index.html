@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attrape les lucioles</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Attrape les lucioles</h1>
+        <p>La nuit tombe sur la forêt : attrape un maximum de lucioles en 30 secondes.</p>
+    </header>
+
+    <main>
+        <div class="panel">
+            <p>Score : <span id="score">0</span></p>
+            <p>Temps : <span id="time">30</span> s</p>
+            <p>Record : <span id="record">0</span></p>
+        </div>
+
+        <!-- la forêt : les lucioles y sont placées avec transform: translate(x, y) -->
+        <div id="forest" class="forest">
+
+            <div id="start-screen" class="screen">
+                <p>Prêt pour la chasse aux lucioles ?</p>
+                <button id="start-button">Commencer</button>
+            </div>
+
+            <div id="end-screen" class="screen hidden">
+                <p>Partie terminée ! Score : <span id="final-score">0</span></p>
+                <p id="new-record" class="new-record hidden">Nouveau record !</p>
+                <button id="replay-button">Rejouer</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

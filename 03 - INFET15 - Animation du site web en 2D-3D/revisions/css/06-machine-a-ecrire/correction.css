@@ -1,0 +1,66 @@
+/* Défi CSS 06 : la machine à écrire
+   Correction. */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: #F4F6F8;
+    color: #1D2A33;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.typing {
+    /* police à chasse fixe : tous les caractères ont la même largeur */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.2rem, 4vw, 2.25rem);
+    color: #1D2A33;
+}
+
+/* ----- La correction : l'écriture et le curseur ----- */
+
+/* 1. le texte est coupé à la largeur de la boîte, sur une seule ligne */
+.typing {
+    width: calc(var(--chars) * 1ch);
+    overflow: hidden;
+    white-space: nowrap;
+    /* 3. le curseur : une bordure à droite */
+    border-right: .12em solid #B10DC9;
+    /* 2. la boîte s'élargit d'un caractère à la fois ; 4. le curseur clignote */
+    animation:
+        typing 3s steps(var(--chars)) 1 both,
+        blink .7s step-end infinite;
+}
+
+/* 2. de 0 à la largeur du texte complet */
+@keyframes typing {
+    from { width: 0; }
+}
+
+/* 4. le curseur disparaît une fois sur deux */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* animations coupées si le système demande de les réduire */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

@@ -1,0 +1,43 @@
+/* Défi CSS 03 : le loader à trois points
+   CSS de départ : le HTML est terminé, écris ton CSS en bas de ce fichier. */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: #F4F6F8;
+    color: #1D2A33;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+main {
+    text-align: center;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    height: 4rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+.dot {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: #B10DC9;
+}
+p {
+    font-size: 1.2rem;
+}
+
+/* ----- À toi : la vague ----- */

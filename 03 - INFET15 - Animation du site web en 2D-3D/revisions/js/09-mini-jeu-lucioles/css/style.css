@@ -1,0 +1,162 @@
+/*
+ * Ce fichier est fourni : il n'y a rien à modifier ici.
+ *
+ * Dans la forêt, les éléments partent du coin en haut à gauche :
+ * on les place avec style.transform = 'translate(x, y)'.
+ *
+ *   .firefly         une luciole (un bouton de 28 × 28 px), qui brille
+ *   .moth            le papillon de nuit piège (un bouton de 36 × 36 px)
+ *   .points          un texte « +1 » qui s'envole puis s'efface (étape 9) ;
+ *   .points.minus    en rouge, pour « -3 »
+ *   .screen          un écran posé sur la forêt (début, fin)
+ *   .hidden          élément caché
+ */
+
+:root {
+    --dark: #0F1A2B;
+    --bg: #F4F6F8;
+    --accent: #B10DC9;
+    --glow: #FFF27A;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+}
+header {
+    text-align: center;
+}
+header p {
+    margin-top: .5rem;
+}
+main {
+    width: min(50rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.panel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+/* la forêt, de nuit */
+.forest {
+    position: relative;
+    height: 26rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 15%, #F5F3CE 0 1.5rem, transparent 1.6rem),
+        linear-gradient(transparent 70%, #0B2416 70%),
+        linear-gradient(#0F1A2B, #1D3557);
+}
+.forest > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* une luciole */
+.firefly {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff 0 15%, var(--glow) 35%, rgba(255, 242, 122, 0) 70%);
+    cursor: pointer;
+    animation: glow 1.2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from { opacity: .55; scale: .85; }
+    to   { opacity: 1; scale: 1.15; }
+}
+
+/* le papillon de nuit */
+.moth {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    filter: grayscale(.6) brightness(.9);
+}
+
+/* les points qui s'envolent */
+.points {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--glow);
+    pointer-events: none;
+    animation: points .8s ease-out forwards;
+}
+.points.minus {
+    color: #FF6B6B;
+}
+@keyframes points {
+    to { translate: 0 -40px; opacity: 0; }
+}
+
+/* écrans de début et de fin */
+.screen {
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(15, 26, 43, .8);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+}
+.new-record {
+    color: var(--glow);
+}
+.hidden,
+.screen.hidden {
+    display: none;
+}
+button:focus-visible {
+    outline: 3px solid #6CB4FF;
+    outline-offset: 3px;
+}
+.screen button {
+    border: none;
+    border-radius: 2rem;
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--accent);
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    .points {
+        display: none;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob prend des cours de danse</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blob prend des cours de danse</h1>
+        <p>Cette fois, aucune animation dans le CSS : tout passe par GSAP.</p>
+    </header>
+
+    <main>
+        <p id="message" aria-live="polite"></p>
+
+        <div class="stage">
+            <!-- les bébés Blobs (étape 8) -->
+            <div class="babies">
+                <span class="baby"></span>
+                <span class="baby"></span>
+                <span class="baby"></span>
+                <span class="baby"></span>
+                <span class="baby"></span>
+            </div>
+            <!-- Blob est dans un conteneur, qui sert à le déplacer à la souris (étape 11) -->
+            <div class="blob-wrapper">
+                <div id="blob" class="blob" role="img" aria-label="Blob, un petit monstre tout rond">
+                    <span class="eye left"></span>
+                    <span class="eye right"></span>
+                    <span class="mouth"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="color-button">Couleur</button>
+            <button id="jump-button">Saute</button>
+            <button id="dance-button">Danse</button>
+            <button id="restart-button">Recommencer</button>
+            <button id="babies-button">Bébés</button>
+        </div>
+
+        <div class="speed">
+            <label for="speed">Vitesse de la danse</label>
+            <input type="range" id="speed" min="0.25" max="3" step="0.25" value="1">
+            <span id="speed-value">× 1</span>
+        </div>
+
+        <p id="reduced-motion-message" class="hidden">
+            Ton système demande de réduire les animations : Blob reste donc sage.
+        </p>
+    </main>
+
+    <!-- GSAP et son plugin Draggable (étape 11), chargés depuis un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-color: #FFF;
+    width: 80%;
+    padding: 2em 3em;
+}
+
+h1#title-1 {
+    border-bottom: solid 2px #000;
+    padding-bottom: 16px;
+}
+
+h1.blue {
+    color: blue;
+}
+
+h1, h2 {
+    font-family: serif;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.inutile {
+    color: red;
+    text-decoration: red wavy underline;
+}
+
+a[target="_blank"]:after {
+	content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+	opacity: 0.6;
+	margin: 3px;
+}

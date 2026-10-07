@@ -1,0 +1,73 @@
+/* Plage, piscine ou maison ?
+ * Fichier fourni, rien à modifier.
+ * Le bonus : les classes beach, pool et home, posées sur <body>,
+ * changent la couleur du fond (avec une transition).
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+    transition: background-color 0.5s;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.beach {
+    background-color: #FFE082;
+}
+
+body.pool {
+    background-color: #81D4FA;
+}
+
+body.home {
+    background-color: #B0BEC5;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em 3em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 14em 6em;
+    align-items: center;
+    gap: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+#result {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5em 0 0;
+    padding: 0.8em;
+    border-radius: 8px;
+    background-color: #F1F3F5;
+}

@@ -1,0 +1,70 @@
+/* Initials B.B.
+ * Fichier fourni, rien à modifier.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #F8F9FA;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em 3em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+/* le badge : un disque avec les initiales au centre */
+#initials {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #607D8B;
+    color: #FFF;
+    font-size: 2.6em;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.3s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 0.4em;
+    width: 14em;
+}

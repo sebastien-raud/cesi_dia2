@@ -1,0 +1,153 @@
+/* Démo : animer en CSS (transform, transition, @keyframes, prefers-reduced-motion) */
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Place pour les carrés tournés, qui débordent de leur emplacement */
+.row-tall {
+    padding: 2rem 0 4rem;
+}
+
+.box {
+    display: grid;
+    place-items: center;
+    width: 110px;
+    height: 110px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: #3b82f6;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------- 1. transform ---------- */
+
+/* Au survol, chaque carré se transforme... sans décaler ses voisins */
+.box-translate:hover { transform: translate(50px, -10px); }
+.box-scale:hover     { transform: scale(2); }
+.box-rotate:hover    { transform: rotate(45deg); }
+.box-skew:hover      { transform: skew(20deg); }
+
+/* Chaque fonction agit dans le repère déjà transformé par la précédente (lues de gauche à droite) :
+   rotate puis translate = on tourne, puis on avance dans la direction tournée.
+   Mêmes fonctions, ordre différent, résultat différent. */
+.box-order-1 { transform: rotate(45deg) translateX(60px); background-color: #8b5cf6; }
+.box-order-2 { transform: translateX(60px) rotate(45deg); background-color: #ec4899; }
+
+/* ---------- 2. transition ---------- */
+
+.box-no-transition:hover {
+    transform: translateY(-15px);
+    background-color: #10b981;
+}
+
+/* La transition se déclare sur l'état normal : elle joue dans les deux sens */
+.box-with-transition {
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.box-with-transition:hover {
+    transform: translateY(-15px);
+    background-color: #10b981;
+}
+
+/* Piste : au survol, les quatre balles parcourent la même distance, en même temps,
+   mais pas à la même vitesse selon l'easing */
+.track {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #e4e7eb;
+}
+
+.ball {
+    width: 110px;
+    padding: 0.4rem;
+    border-radius: 999px;
+    color: #ffffff;
+    background-color: #f59e0b;
+    text-align: center;
+    font-size: 0.8rem;
+    transition: transform 1.5s;
+}
+
+.track:hover .ball {
+    transform: translateX(600px);
+}
+
+.ease-linear { transition-timing-function: linear; }
+.ease-ease   { transition-timing-function: ease; }
+.ease-in-out { transition-timing-function: ease-in-out; }
+.ease-bounce { transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6); } /* dépasse, puis revient */
+
+/* ---------- 3. @keyframes ---------- */
+
+/* Un tour complet, en boucle, à vitesse constante */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #cbd2d9;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Plusieurs étapes en pourcentage de la durée */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-50px); }
+}
+
+.bouncing-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    /* nom, durée, easing, répétition */
+    animation: bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+.box-pulse {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+/* ---------- 4. prefers-reduced-motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

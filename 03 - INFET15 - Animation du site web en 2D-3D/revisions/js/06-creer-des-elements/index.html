@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La confiserie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>La confiserie</h1>
+        <p>La vitrine est vide : à toi de la remplir en JavaScript !</p>
+    </header>
+
+    <main>
+        <!-- étapes 1 et 2 : pour s'échauffer -->
+        <section class="warmup">
+            <h2>Échauffement</h2>
+            <div id="warmup"></div>
+        </section>
+
+        <!-- le sac (étapes 6 à 8) -->
+        <section class="bag">
+            <p>
+                <span id="bag-icon" class="bag-icon" aria-hidden="true">🛍️</span>
+                Sac : <span id="bag-count">0</span> bonbon(s), total <span id="bag-total">0,00 €</span>
+            </p>
+            <div id="bag-items" class="bag-items"></div>
+            <button id="empty-button">Vider le sac</button>
+        </section>
+
+        <!-- les filtres (étape 9) -->
+        <div class="filters">
+            <button id="filter-all" class="active">Tout</button>
+            <button id="filter-cheap">Moins de 1 €</button>
+            <button id="filter-sour">Acidulés</button>
+            <button id="filter-chocolate">Au chocolat</button>
+        </div>
+
+        <!-- la vitrine : vide au départ -->
+        <section id="showcase" class="showcase"></section>
+        <p id="empty-message" class="empty-message hidden">Plus de chocolat, tout a été mangé ! 🍫</p>
+    </main>
+
+    <!-- le ciel, d'où tombent des bonbons (étape 11) -->
+    <div id="sky" class="sky"></div>
+
+    <!-- le modèle d'une carte (étape 4) -->
+    <template id="candy-template">
+        <button class="candy">
+            <span class="emoji"></span>
+            <span class="name"></span>
+            <span class="price"></span>
+        </button>
+    </template>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

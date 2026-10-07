@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : sélection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="container">
+        <header>
+            <h1>Document Object Model</h1>
+        </header>
+
+        <main>
+            <section id="generalites">
+                <p>Le Document Object Model (DOM) est une interface de programmation normalisée par le 
+                <a href="https://fr.wikipedia.org/wiki/W3C">W3C</a>, qui permet à des scripts d'examiner 
+                et de modifier le contenu du <a href="https://fr.wikipedia.org/wiki/Navigateur_web">navigateur web</a>. 
+                Par le DOM, la composition d'un document <a href="https://fr.wikipedia.org/wiki/HTML">HTML</a> ou 
+                <a href="https://fr.wikipedia.org/wiki/XML">XML</a> est représentée sous forme d'un jeu d'objets
+                (lesquels peuvent représenter une fenêtre, une phrase ou un style, par exemple) reliés selon une 
+                structure en <a href="https://fr.wikipedia.org/wiki/Arbre_(informatique)">arbre</a>. 
+                À l'aide du DOM, un script peut modifier le document présent dans le navigateur en ajoutant ou en 
+                supprimant des nœuds de l'arbre.</p>
+            </section>
+
+            <section id="histoire">
+                <h2>Histoire</h2>
+                <p>À l'origine, le DOM (niveau 0, <em>legacy</em>) était un ensemble d'objets mis à disposition 
+                par <a href="https://fr.wikipedia.org/wiki/Netscape_Navigator">Netscape Navigator</a>, dont la version 4 
+                parut en juin 1997. <a href="https://fr.wikipedia.org/wiki/Internet_Explorer">Internet Explorer</a> 4 
+                suivit en octobre la même année. Ces deux navigateurs intégraient le support du 
+                <a href="https://fr.wikipedia.org/wiki/DHTML">DHTML</a>, lequel requérait des extensions alors offertes 
+                par le DOM rudimentaire d'alors. Le document pouvait désormais être manipulé à travers le DOM ; cependant 
+                le même document n'était pas représenté de la même manière par les deux navigateurs. Ce problème a 
+                progressivement disparu avec l'adoption du DOM normalisé par le 
+                <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a>. Le DOM (niveau 4) est aujourd'hui 
+                incorporé dans la norme <a href="https://fr.wikipedia.org/wiki/HTML5">HTML5</a>.</p>
+            </section>
+
+            <section id="inutile">
+                <p class="inutile">Note pour plus tard : il faut vraiment penser à supprimer cette section qui est inutile !!!</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  html {
+    overflow-y: scroll;
+    --color-main: #4a69bd;
+    --color-alt: #1e3799;
+    --color-bg: #0a3d62;
+  }
+  
+  body {
+    line-height: 1.4;
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  input, select, button {
+    font: inherit;
+  }
+  
+  p {
+    margin: 1rem 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .segment {
+    background-color: white;
+    display: block;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .15);
+    margin:  2rem 0;
+    border: 1px solid #eee;
+  }
+  
+  .title {
+    font-size: 3em;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
+  
+  .title--big {
+    font-size: 4em;
+  }
+  
+  .title--small {
+    font-size: 2em;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--color-main);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .2);
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .btn-disc {
+    display: inline-flex;
+    width: 2em;
+    height: 2em;
+    background-color: rgba(255, 255, 255, .2);
+    vertical-align: middle;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+  }
+  
+  .btn:hover {
+    background-color: var(--color-alt);
+    box-shadow: inset 0 10px 10px -5px rgba(0, 0, 0, .2), inset 0 -5px var(--color-main);
+  }
+  
+  .btn:focus {
+    outline: 2px solid var(--color-alt);
+  }
+  
+  .btn + .btn {
+    margin-left: 1rem;
+  }
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    text-align: center;
+    box-shadow: inset 0 -10px 20px -15px rgba(0, 0, 0, .3);
+  }
+  
+  .menu {
+    font-size: 1.2em;
+  }
+  
+  .menu-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #777;
+  }
+  
+  .menu-link:hover, .menu-link:focus {
+    background-color: rgba(0, 0, 0, .1);
+    color: black;
+  }
+  
+  .menu-link--active {
+    color: var(--color-main);
+    border-bottom: 4px solid var(--color-main);
+  }
+  
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #111;
+    color: #ccc;
+  }
+  
+  .footer-link {
+    color: #aaa;
+    text-decoration: none;
+  }
+  .footer-link:hover, .footer-link:focus {
+    text-decoration: underline;
+  }
+  
+  .content {
+    padding: 2rem;
+    background-color: white;
+    flex-grow: 1;
+    font-size: 1.2em;
+  }
+  
+  .statement {
+    padding: 2rem;
+    background-color: cornsilk;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    counter-reset: section;
+    color: #5d4d10;
+    margin-bottom: 2rem;
+  }
+  
+  .statement-task {
+    position: relative;
+  }
+  
+  .statement-task::before {
+    counter-increment: section;  
+    content: counter(section);
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: -3.5rem;
+    top: -.75rem;
+    font-size: 1.5em;
+    background-color: cornsilk;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #5d4e105b;
+    box-shadow: -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .statement-task + .statement-task {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding-top: 2rem;
+  }
+  
+  .statement-task + .statement-task::before {
+    top: 1.25rem;
+  }
+  
+  .section {
+    margin: 1rem 0;
+  }
+  
+  .message {
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    background-color: ghostwhite;
+    color: darkblue;
+  }
+  
+  .message--error {
+    background-color: mistyrose;
+    color: brown;
+  }
+  
+  .message--success {
+    background-color: honeydew;
+    color: darkgreen;
+  }
+  
+  .quiz select, .quiz input {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin-top: 1rem;
+  }
+  
+  .inline-code {
+    display: inline-block;
+    background-color: #444;
+    color: white;
+    font-family: monospace;
+    padding: .5rem;
+  }
+  
+  .profil {
+    margin:2rem auto;
+    max-width: 30em;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .3);
+  }
+  
+  .profil-avatar {
+    width: 130px;
+    border-radius: 50%;
+    margin-right: 2rem;
+    overflow: hidden;
+  }
+  
+  .profil-avatar img {
+    display: block;
+    height: 100%;
+  }
+  
+  .profil-infos {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .profil-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
+  
+  .profil-content {
+    opacity: .5;
+  }
+  
+  .profil-badges {
+    margin-top: auto;
+  }
+  
+  .profil-badge {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: var(--color-main);
+    color: white;
+    border-radius: 5px;
+    font-size: .8em;
+  }
+  
+  .line {
+    display: block;
+    height: 2em;
+    background-color: #222;
+    padding: .5rem;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes line {
+    from {
+      width: 0;
+    }
+  }
+  
+  .line span {
+    display: block;
+    width: 0;
+    background-color: var(--color-main);
+    height: 100%;
+    border-radius: 5px;
+    animation: line .5s ease 0s 1;
+  }
+  
+  .box {
+    width: 800px;
+    margin: 1rem auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    height: 500px;
+  }
+  
+  .box-background {
+    max-width: none;
+  }
+  
+  .box-title {
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    z-index: 2;
+    white-space: nowrap;
+    text-shadow:0 0 5px white, 10px 10px 20px rgba(0, 0, 0, .3);
+  }
+  
+  .box-foreground {
+    position: absolute;
+    width: 200px;
+    left: 580px;
+    bottom: 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+    animation: show .5s ease 0s 1;
+  }

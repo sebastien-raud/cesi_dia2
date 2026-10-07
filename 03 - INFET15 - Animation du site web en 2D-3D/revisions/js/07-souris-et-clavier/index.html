@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La coccinelle au jardin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>La coccinelle au jardin</h1>
+        <p>D'abord la souris, puis le clavier : promène la coccinelle avec les flèches.</p>
+    </header>
+
+    <main>
+        <div class="panel">
+            <p id="coords">x : 0, y : 0</p>
+            <p>Feuilles mangées : <span id="score">0</span></p>
+        </div>
+
+        <!-- le jardin : tous les éléments y sont positionnés avec transform: translate(x, y) -->
+        <div id="garden" class="garden">
+            <span id="flower" class="flower" aria-hidden="true">🌼</span>
+            <div id="ladybug" class="ladybug" role="img" aria-label="Une coccinelle"></div>
+            <span id="spider" class="spider hidden" aria-hidden="true">🕷️</span>
+
+            <div id="game-over" class="game-over hidden">
+                <p>Croquée par l'araignée !</p>
+                <button id="replay-button">Rejouer</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

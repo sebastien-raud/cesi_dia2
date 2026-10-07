@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plage, piscine ou maison ?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Plage, piscine ou maison ?</h1>
+
+        <form>
+            <label for="temperature">Température</label>
+            <input type="range" id="temperature" min="-10" max="40" value="25">
+            <span><span id="temperature-value">25</span> °C</span>
+
+            <label for="wind">Force du vent</label>
+            <input type="range" id="wind" min="0" max="120" value="10">
+            <span><span id="wind-value">10</span> km/h</span>
+
+            <label for="uv">Indice UV</label>
+            <input type="range" id="uv" min="0" max="11" value="4">
+            <span id="uv-value">4</span>
+
+            <label for="month">Mois</label>
+            <select id="month">
+                <option value="1">janvier</option>
+                <option value="2">février</option>
+                <option value="3">mars</option>
+                <option value="4">avril</option>
+                <option value="5">mai</option>
+                <option value="6">juin</option>
+                <option value="7" selected>juillet</option>
+                <option value="8">août</option>
+                <option value="9">septembre</option>
+                <option value="10">octobre</option>
+                <option value="11">novembre</option>
+                <option value="12">décembre</option>
+            </select>
+        </form>
+
+        <p id="result">…</p>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

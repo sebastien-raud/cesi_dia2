@@ -1,0 +1,207 @@
+/*
+ * Ce fichier est fourni : il n'y a rien à modifier ici.
+ *
+ *   .candy          une carte de bonbon (un bouton) ; sa couleur se règle avec --color
+ *                   elle apparaît avec un délai qui dépend de la variable --i (étape 5)
+ *   .candy.picked   l'emoji de la carte réagit quand on la choisit (étape 6)
+ *   .bag-icon.bump  le sac sursaute (étape 6)
+ *   .falling        un bonbon qui tombe du ciel (étape 11)
+ *   .hidden         élément caché
+ */
+
+:root {
+    --dark: #2B1E2F;
+    --bg: #FFF7FB;
+    --accent: #D6336C;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+}
+header {
+    text-align: center;
+}
+header p {
+    margin-top: .5rem;
+}
+main {
+    width: min(55rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+/* échauffement */
+.warmup {
+    padding: 1rem;
+    border: 2px dashed #E7B8CC;
+    border-radius: 1rem;
+}
+.warmup ul {
+    margin-left: 1.5rem;
+}
+
+/* le sac */
+.bag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+.bag p {
+    font-weight: bold;
+}
+.bag-icon {
+    display: inline-block;
+    font-size: 1.75rem;
+}
+.bag-icon.bump {
+    animation: bump .4s ease-out;
+}
+.bag-items {
+    flex: 1;
+    font-size: 1.5rem;
+    min-height: 2rem;
+}
+
+/* boutons */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+.bag button,
+.filters button {
+    border: none;
+    border-radius: 2rem;
+    padding: .6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--accent);
+}
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.filters button {
+    background-color: #fff;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+.filters button.active {
+    background-color: var(--accent);
+    color: #fff;
+}
+button:focus-visible {
+    outline: 3px solid #0074D9;
+    outline-offset: 3px;
+}
+
+/* la vitrine */
+.showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    gap: 1rem;
+    min-height: 10rem;
+}
+.candy {
+    --color: #FFD6E7;
+    --i: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    padding: 1rem .5rem;
+    border: none;
+    border-radius: 1.25rem;
+    background-color: var(--color);
+    color: var(--dark);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, .12);
+    /* apparition en cascade : chaque carte attend --i × 80 ms
+       (backwards : la carte reste invisible pendant son attente) */
+    animation: appear .4s ease-out backwards;
+    animation-delay: calc(var(--i) * 80ms);
+    transition: transform .2s;
+}
+.candy:hover {
+    transform: translateY(-4px) rotate(-2deg);
+}
+.candy .emoji {
+    font-size: 2.5rem;
+}
+.candy .name {
+    font-weight: bold;
+}
+/* c'est l'emoji qui réagit (si c'était la carte, retirer la classe rejouerait son apparition) */
+.candy.picked .emoji {
+    display: inline-block;
+    animation: picked .4s ease-out;
+}
+.empty-message {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+.hidden {
+    display: none;
+}
+
+/* le ciel et les bonbons qui tombent */
+.sky {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.falling {
+    position: absolute;
+    top: -3rem;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    pointer-events: auto;
+    animation: fall 4s linear forwards;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px) scale(.8); }
+    to   { opacity: 1; transform: none; }
+}
+@keyframes picked {
+    50% { transform: scale(1.15) rotate(6deg); }
+}
+@keyframes bump {
+    50% { transform: scale(1.4) rotate(-10deg); }
+}
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

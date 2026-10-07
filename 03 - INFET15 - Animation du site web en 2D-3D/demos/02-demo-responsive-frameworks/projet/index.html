@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Sans cette ligne, un téléphone affiche la page comme un écran d'ordinateur, en tout petit -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démo · Responsive et frameworks</title>
+    <!-- Animate.css : une bibliothèque d'animations CSS toutes faites, chargée par CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <!-- Animate.css : deux classes suffisent, animate__animated + le nom de l'animation -->
+        <h1 class="animate__animated animate__fadeInDown">Carnet de voyage</h1>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Asie</a></li>
+                <li><a href="#">Amériques</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Une grille de cartes : 1, 2 puis 3 colonnes selon la largeur (voir style.css) -->
+        <div class="grid">
+            <!-- animate__delay-1s : l'animation démarre après une seconde -->
+            <article class="card animate__animated animate__fadeInUp">
+                <h2>Lisbonne</h2>
+                <p>Tramways jaunes et pastéis de nata.</p>
+            </article>
+            <article class="card animate__animated animate__fadeInUp">
+                <h2>Kyoto</h2>
+                <p>Temples, jardins et cerisiers en fleur.</p>
+            </article>
+            <article class="card animate__animated animate__fadeInUp">
+                <h2>Montréal</h2>
+                <p>Bagels, érables et hivers bien froids.</p>
+            </article>
+            <article class="card animate__animated animate__fadeInUp animate__delay-1s">
+                <h2>Marrakech</h2>
+                <p>Souks, épices et jardins secrets.</p>
+            </article>
+            <article class="card animate__animated animate__fadeInUp animate__delay-1s">
+                <h2>Reykjavik</h2>
+                <p>Aurores boréales et sources chaudes.</p>
+            </article>
+            <article class="card animate__animated animate__fadeInUp animate__delay-1s">
+                <h2>Oaxaca</h2>
+                <p>Marchés colorés et mole noir.</p>
+            </article>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démo · Animer en CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Animer en CSS</h1>
+
+    <!-- 1. transform : déplacer, agrandir, tourner, incliner (survoler chaque carré) -->
+    <section>
+        <h2>1. transform</h2>
+        <div class="row">
+            <div class="box box-translate">translate</div>
+            <div class="box box-scale">scale</div>
+            <div class="box box-rotate">rotate</div>
+            <div class="box box-skew">skew</div>
+        </div>
+
+        <h3>L'ordre compte</h3>
+        <div class="row row-tall">
+            <div class="box box-order-1">rotate puis translate</div>
+            <div class="box box-order-2">translate puis rotate</div>
+        </div>
+    </section>
+
+    <!-- 2. transition : passer d'un état à l'autre en douceur -->
+    <section>
+        <h2>2. transition</h2>
+        <div class="row">
+            <div class="box box-no-transition">sans transition</div>
+            <div class="box box-with-transition">avec transition</div>
+        </div>
+
+        <h3>Easing : survoler la piste</h3>
+        <div class="track">
+            <div class="ball ease-linear">linear</div>
+            <div class="ball ease-ease">ease</div>
+            <div class="ball ease-in-out">ease-in-out</div>
+            <div class="ball ease-bounce">cubic-bezier</div>
+        </div>
+    </section>
+
+    <!-- 3. @keyframes : une animation qui se joue toute seule -->
+    <section>
+        <h2>3. @keyframes</h2>
+        <div class="row">
+            <div class="spinner" aria-label="Chargement en cours" role="img"></div>
+            <div class="bouncing-dot"></div>
+            <div class="box box-pulse">pulse</div>
+        </div>
+    </section>
+
+    <!-- 4. prefers-reduced-motion : voir la fin de style.css -->
+    <section>
+        <h2>4. prefers-reduced-motion</h2>
+        <p>Activer « réduire les animations » dans les outils de développement :
+            toutes les animations de la page s'arrêtent.</p>
+    </section>
+</body>
+</html>

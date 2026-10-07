@@ -1,0 +1,91 @@
+/* Démo : responsive (mobile first, flexbox, grid, media queries) */
+
+/* ---------- Étape 1 : le mobile, sans media query ---------- */
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+.page-header {
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #0f766e;
+}
+
+.page-header h1 {
+    margin: 0 0 0.5rem;
+}
+
+/* Flexbox : une dimension, ici une ligne de liens qui passe à la ligne si besoin */
+.page-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-header a {
+    color: #ffffff;
+}
+
+main {
+    max-width: 1100px; /* sur grand écran, le contenu ne s'étale pas */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Grid : deux dimensions, des colonnes et des lignes. Sur mobile : une colonne */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Étape 2 : tablette, à partir de 600px ---------- */
+
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* deux colonnes de même largeur */
+    }
+}
+
+/* ---------- Étape 3 : ordinateur, à partir de 960px ---------- */
+
+@media (min-width: 960px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* En-tête sur une ligne : titre à gauche, navigation à droite */
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-header h1 {
+        margin: 0;
+    }
+}
+
+/* ---------- Pour aller plus loin : sans aucune media query ---------- */
+
+/* Autant de colonnes de 250px minimum que la largeur le permet.
+   Décommenter : placée en fin de fichier, cette règle remplace les étapes 1 à 3 pour la grille. */
+/*
+.grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+*/
