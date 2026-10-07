@@ -11,6 +11,7 @@ Des fiches, des exercices guidés et des défis pour revoir les bases du front e
 - 🎯 Objectif [↗](#objectif)
 - 🚀 Démarrer [↗](#demarrer)
 - 🗂️ Structure [↗](#structure)
+- 🎁 Bonus - Quiz - Memory [↗](#bonus)
 
 ---
 
@@ -66,3 +67,11 @@ Chaque partie a sa page d'entrée, qui explique comment travailler.
   - fiches thématiques : [sémantique](a11y/cours/fiches/1.semantics.md), [régions repères](a11y/cours/fiches/2.landmarks.md), [images et contenus visuels](a11y/cours/fiches/3.images.md), [navigation, liens et boutons](a11y/cours/fiches/4.nav-links-buttons.md), [polices et styles](a11y/cours/fiches/5.fonts-styles.md), [formulaires](a11y/cours/fiches/6.forms.md), [tableaux](a11y/cours/fiches/7.tableaux.md), [médias (vidéos et audio)](a11y/cours/fiches/8.medias.md), [ARIA et composants d'interface riche](a11y/cours/fiches/9.aria.md)
 
 Chaque README renvoie vers ses énoncés et ses corrections, et chaque page a un lien de retour.
+
+---
+
+<a id="bonus">
+# 🎁 Bonus - Quiz - Memory
+
+- [Jeux](https://sebastien-raud.github.io/jeux/index.html) quiz et memory sur HTML, CSS et JavaScript
+
