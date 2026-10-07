@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Bibliothèque : un caisson, trois étagères et des livres -->
+  <rect width="200" height="150" fill="#f3e9dc"/>
+  <rect x="55" y="15" width="90" height="120" fill="#5c3a1e"/>
+  <rect x="62" y="22" width="76" height="106" fill="#f3e9dc"/>
+  <rect x="62" y="55" width="76" height="6" fill="#5c3a1e"/>
+  <rect x="62" y="90" width="76" height="6" fill="#5c3a1e"/>
+  <rect x="66" y="30" width="8" height="25" fill="#b5523b"/>
+  <rect x="76" y="34" width="8" height="21" fill="#3d6b5a"/>
+  <rect x="86" y="28" width="8" height="27" fill="#d9a441"/>
+  <rect x="70" y="66" width="8" height="24" fill="#3d6b5a"/>
+  <rect x="80" y="70" width="8" height="20" fill="#b5523b"/>
+  <rect x="100" y="100" width="8" height="28" fill="#d9a441"/>
+  <rect x="110" y="104" width="8" height="24" fill="#b5523b"/>
+</svg>
