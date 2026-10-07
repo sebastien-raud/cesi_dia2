@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démo · Déclencher une animation en JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- defer : le script s'exécute une fois tout le HTML lu, les éléments existent déjà -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Déclencher une animation en JavaScript</h1>
+
+    <!-- 1. Une notification qui glisse depuis le bas -->
+    <section>
+        <h2>1. Afficher une notification</h2>
+        <button class="save-button" type="button">Enregistrer</button>
+    </section>
+
+    <!-- 2. Un champ qui « secoue » en cas d'erreur, à chaque essai -->
+    <section>
+        <h2>2. Rejouer une animation</h2>
+        <form class="code-form">
+            <label for="code">Code secret (indice : 1234)</label>
+            <input id="code" type="text" inputmode="numeric" autocomplete="off">
+            <button type="submit">Valider</button>
+        </form>
+    </section>
+
+    <!-- La notification : cachée hors de l'écran tant qu'elle n'a pas la classe is-visible.
+         role="status" : les lecteurs d'écran annoncent son contenu quand il change. -->
+    <p class="toast" role="status">Modifications enregistrées</p>
+</body>
+</html>

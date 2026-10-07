@@ -1,0 +1,60 @@
+/* Démo : le CSS décrit les états et les animations, le JavaScript change les classes */
+
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+button,
+input {
+    padding: 0.5rem 1rem;
+    font: inherit;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ---------- 1. La notification ---------- */
+
+/* État normal : sous le bas de l'écran, invisible */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: #0f766e;
+    opacity: 0;
+    transform: translate(-50%, 150%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* État visible : la classe is-visible est ajoutée par le JavaScript */
+.toast.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* ---------- 2. Le champ qui secoue ---------- */
+
+@keyframes shake {
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+
+/* La classe is-error déclenche l'animation... une seule fois tant qu'elle reste là */
+.code-form input.is-error {
+    border: 2px solid #dc2626;
+    animation: shake 0.4s ease;
+}
+
+.code-form input.is-success {
+    border: 2px solid #16a34a;
+}

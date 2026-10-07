@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Table : un plateau et quatre pieds -->
+  <rect width="200" height="150" fill="#f3e9dc"/>
+  <rect x="30" y="50" width="140" height="14" rx="3" fill="#8b5a2b"/>
+  <rect x="40" y="64" width="10" height="60" fill="#5c3a1e"/>
+  <rect x="150" y="64" width="10" height="60" fill="#5c3a1e"/>
+  <rect x="62" y="64" width="8" height="50" fill="#7a4d24"/>
+  <rect x="130" y="64" width="8" height="50" fill="#7a4d24"/>
+</svg>
