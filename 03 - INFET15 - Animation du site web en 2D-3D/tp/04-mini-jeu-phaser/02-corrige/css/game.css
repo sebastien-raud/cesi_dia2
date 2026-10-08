@@ -1,0 +1,26 @@
+/* ==========================================================
+   Page du jeu-concours (TP 4)
+   ========================================================== */
+
+.game-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+/* Le canvas de Phaser s'adapte à la largeur de son conteneur (voir scale dans game.js) */
+.game-container {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Touches du clavier affichées comme des touches */
+kbd {
+    padding: 0 0.4rem;
+    border: 1px solid var(--color-wood-dark);
+    border-radius: 4px;
+    background-color: var(--color-white);
+}

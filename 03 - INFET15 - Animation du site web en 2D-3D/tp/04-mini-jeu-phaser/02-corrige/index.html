@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- lang : langue de la page, utilisée par les lecteurs d'écran pour la prononciation -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport : indispensable pour que la page s'adapte à la largeur des mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>L'Atelier du Meuble · Meubles artisanaux en bois massif</title>
+    <meta name="description" content="Meubles artisanaux en bois massif, fabriqués à la main dans notre atelier.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GSAP, chargé depuis un CDN, AVANT notre script qui l'utilise.
+         Avec defer, les scripts s'exécutent dans l'ordre où ils sont écrits. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <!-- defer : le script s'exécute une fois le HTML entièrement lu -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Lien d'évitement : au clavier, permet de sauter directement au contenu principal -->
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <!-- En-tête du site : logo et navigation principale -->
+    <header class="site-header">
+        <a class="logo" href="#accueil">L'Atelier du Meuble</a>
+
+        <!-- Bouton du menu mobile : masqué pour l'instant, il sera utilisé plus tard.
+             aria-expanded indique aux lecteurs d'écran si le menu est ouvert ou fermé. -->
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            Menu
+        </button>
+
+        <!-- aria-label : nomme la zone de navigation pour les lecteurs d'écran -->
+        <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#meubles">Nos meubles</a></li>
+                <li><a href="#savoir-faire">Savoir-faire</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal : un seul <main> par page -->
+    <main id="main">
+
+        <!-- Bandeau d'accueil : le seul <h1> de la page -->
+        <section class="hero" id="accueil">
+            <h1>L'Atelier du Meuble</h1>
+            <p class="hero-tagline">Des meubles en bois massif, fabriqués à la main, faits pour durer.</p>
+            <a class="button" href="#meubles">Découvrir nos meubles</a>
+            <!-- Bouton de test, pratique pour régler l'intro sans recharger la page -->
+            <button class="replay-button" type="button">Rejouer l'intro</button>
+        </section>
+
+        <!-- Catalogue : chaque meuble est un <article>, un contenu autonome -->
+        <section class="products" id="meubles">
+            <h2>Nos meubles</h2>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <!-- alt : décrit l'image pour ceux qui ne la voient pas -->
+                    <img src="images/table.svg" alt="Table rectangulaire en chêne à quatre pieds" width="200" height="150">
+                    <h3>Table en chêne</h3>
+                    <p class="price">890 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/chair.svg" alt="Chaise bistrot à dossier droit" width="200" height="150">
+                    <h3>Chaise bistrot</h3>
+                    <p class="price">149 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/stool.svg" alt="Tabouret haut à assise ronde" width="200" height="150">
+                    <h3>Tabouret d'atelier</h3>
+                    <p class="price">95 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/bookcase.svg" alt="Bibliothèque à trois étagères garnies de livres" width="200" height="150">
+                    <h3>Bibliothèque en noyer</h3>
+                    <p class="price">620 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/dresser.svg" alt="Commode à trois tiroirs" width="200" height="150">
+                    <h3>Commode trois tiroirs</h3>
+                    <p class="price">540 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/armchair.svg" alt="Fauteuil à accoudoirs avec coussin" width="200" height="150">
+                    <h3>Fauteuil club</h3>
+                    <p class="price">720 €</p>
+                    <button class="favorite-button" type="button" aria-pressed="false">Ajouter aux favoris</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Savoir-faire : une liste ordonnée, car les étapes se suivent -->
+        <section class="know-how" id="savoir-faire">
+            <h2>Notre savoir-faire</h2>
+
+            <ol class="steps">
+                <li class="step">
+                    <h3>Choisir le bois</h3>
+                    <p>Chêne, noyer, frêne : des essences locales, issues de forêts gérées durablement.</p>
+                </li>
+                <li class="step">
+                    <h3>Façonner à la main</h3>
+                    <p>Chaque pièce est découpée, assemblée et poncée dans notre atelier.</p>
+                </li>
+                <li class="step">
+                    <h3>Finir avec soin</h3>
+                    <p>Huiles et cires naturelles protègent le bois sans le cacher.</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Pied de page : coordonnées. <address> est prévu pour les informations de contact. -->
+    <footer class="site-footer" id="contact">
+        <h2>Contact</h2>
+        <address>
+            L'Atelier du Meuble<br>
+            12 rue des Artisans, 44000 Nantes<br>
+            <a href="tel:+33240000000">02 40 00 00 00</a> ·
+            <a href="mailto:contact@atelier-du-meuble.fr">contact@atelier-du-meuble.fr</a>
+        </address>
+        <!-- Lien vers la page du jeu-concours (TP 4) -->
+        <p><a href="jeu.html">Jeu-concours : attrapez les meubles !</a></p>
+    </footer>
+</body>
+</html>

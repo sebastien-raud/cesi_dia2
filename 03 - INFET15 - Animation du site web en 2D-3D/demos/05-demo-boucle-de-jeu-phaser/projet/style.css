@@ -1,0 +1,17 @@
+/* Démo : boucle de jeu et Phaser */
+
+body {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    background-color: #1f2933;
+}
