@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Commode : un caisson, trois tiroirs avec poignées -->
+  <rect width="200" height="150" fill="#f3e9dc"/>
+  <rect x="40" y="30" width="120" height="95" rx="4" fill="#8b5a2b"/>
+  <rect x="48" y="38" width="104" height="24" fill="#a0693a"/>
+  <rect x="48" y="66" width="104" height="24" fill="#a0693a"/>
+  <rect x="48" y="94" width="104" height="24" fill="#a0693a"/>
+  <circle cx="100" cy="50" r="3" fill="#5c3a1e"/>
+  <circle cx="100" cy="78" r="3" fill="#5c3a1e"/>
+  <circle cx="100" cy="106" r="3" fill="#5c3a1e"/>
+  <rect x="45" y="125" width="8" height="10" fill="#5c3a1e"/>
+  <rect x="147" y="125" width="8" height="10" fill="#5c3a1e"/>
+</svg>

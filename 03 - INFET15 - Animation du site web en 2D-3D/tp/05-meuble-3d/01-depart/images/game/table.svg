@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 50" width="80" height="50">
+  <!-- Table, sans fond : pour le jeu -->
+  <rect x="0" y="5" width="80" height="9" rx="2" fill="#8b5a2b"/>
+  <rect x="6" y="14" width="7" height="36" fill="#5c3a1e"/>
+  <rect x="67" y="14" width="7" height="36" fill="#5c3a1e"/>
+</svg>

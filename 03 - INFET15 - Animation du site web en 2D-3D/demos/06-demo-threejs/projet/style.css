@@ -1,0 +1,18 @@
+/* Démo : Three.js */
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+/* La zone de dessin : Three.js y ajoute un canvas de la même taille */
+#view {
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}

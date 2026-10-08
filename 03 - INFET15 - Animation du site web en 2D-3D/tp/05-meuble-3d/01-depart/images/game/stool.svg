@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 60" width="50" height="60">
+  <!-- Tabouret, sans fond : pour le jeu -->
+  <ellipse cx="25" cy="6" rx="22" ry="6" fill="#8b5a2b"/>
+  <rect x="6" y="9" width="5" height="50" fill="#5c3a1e" transform="rotate(8 8 9)"/>
+  <rect x="39" y="9" width="5" height="50" fill="#5c3a1e" transform="rotate(-8 42 9)"/>
+  <rect x="10" y="38" width="30" height="4" fill="#7a4d24"/>
+</svg>

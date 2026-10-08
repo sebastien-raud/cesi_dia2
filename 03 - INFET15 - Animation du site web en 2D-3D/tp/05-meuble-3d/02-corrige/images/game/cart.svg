@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="120" height="60">
+  <!-- Chariot de l'atelier : un plateau, deux bords, deux roues -->
+  <rect x="5" y="30" width="110" height="10" rx="2" fill="#5c3a1e"/>
+  <rect x="5" y="15" width="6" height="15" fill="#5c3a1e"/>
+  <rect x="109" y="15" width="6" height="15" fill="#5c3a1e"/>
+  <circle cx="25" cy="48" r="10" fill="#2b2118"/>
+  <circle cx="95" cy="48" r="10" fill="#2b2118"/>
+</svg>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeu-concours · L'Atelier du Meuble</title>
+    <!-- Même feuille de style que le site, plus quelques règles propres au jeu -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+    <!-- Phaser, chargé depuis un CDN, AVANT notre script qui l'utilise -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@4.2/dist/phaser.min.js" defer></script>
+    <script src="js/game.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">L'Atelier du Meuble</a>
+    </header>
+
+    <main class="game-page">
+        <h1>Jeu-concours : attrapez les meubles !</h1>
+        <p>Déplacez le chariot avec les flèches <kbd>←</kbd> et <kbd>→</kbd> du clavier.
+            Chaque meuble attrapé rapporte un point.</p>
+
+        <!-- Phaser dessine le jeu dans un <canvas> qu'il crée lui-même dans cette div -->
+        <div id="game" class="game-container"></div>
+
+        <p><a href="index.html">Retour au site</a></p>
+    </main>
+</body>
+</html>

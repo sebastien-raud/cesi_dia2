@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démo · Three.js</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP (script classique), pour animer les objets 3D -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <!-- Import map : où trouver « three » quand un module l'importe -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.186/build/three.module.js"
+            }
+        }
+    </script>
+    <!-- Un module : exécuté après la lecture du HTML, et après GSAP -->
+    <script type="module" src="scene.js"></script>
+</head>
+<body>
+    <h1>Three.js : une scène 3D</h1>
+    <p>Gauche : <code>MeshBasicMaterial</code>. Droite : <code>MeshStandardMaterial</code>. Clic sur la scène : GSAP fait sauter les cubes.</p>
+    <div id="view"></div>
+</body>
+</html>
