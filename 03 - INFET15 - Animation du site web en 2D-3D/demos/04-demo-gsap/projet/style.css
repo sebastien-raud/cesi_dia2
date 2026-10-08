@@ -1,0 +1,74 @@
+/* Démo : GSAP. Le CSS ne contient aucune animation : seulement l'état normal des éléments. */
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+}
+
+button {
+    padding: 0.4rem 0.9rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+.lane {
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #cbd2d9;
+}
+
+.box {
+    width: 80px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: #3b82f6;
+    text-align: center;
+}
+
+.stage {
+    position: relative;
+    height: 180px;
+    border-radius: 8px;
+    background-color: #1f2933;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    top: 60px;
+    width: 60px;
+    height: 60px;
+}
+
+.shape-square { left: 40px;  background-color: #f59e0b; }
+.shape-circle { left: 160px; background-color: #10b981; border-radius: 50%; }
+.shape-bar    { left: 280px; background-color: #ec4899; width: 20px; }
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.dots {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.dots span {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #8b5cf6;
+}

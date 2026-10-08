@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démo · GSAP</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP par CDN, puis notre script : l'ordre compte -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>GSAP</h1>
+
+    <!-- 1. Les trois méthodes de base -->
+    <section>
+        <h2>1. to, from, fromTo</h2>
+        <div class="lane"><div class="box box-to">to</div></div>
+        <div class="lane"><div class="box box-from">from</div></div>
+        <div class="lane"><div class="box box-fromto">fromTo</div></div>
+        <button class="play-basics" type="button">Jouer</button>
+    </section>
+
+    <!-- 2. Une timeline : enchaîner sans calculer de délai, et la piloter -->
+    <section>
+        <h2>2. Timeline</h2>
+        <div class="stage">
+            <div class="shape shape-square"></div>
+            <div class="shape shape-circle"></div>
+            <div class="shape shape-bar"></div>
+        </div>
+        <div class="controls">
+            <button class="tl-play" type="button">Lecture</button>
+            <button class="tl-pause" type="button">Pause</button>
+            <button class="tl-reverse" type="button">Inverser</button>
+            <button class="tl-restart" type="button">Recommencer</button>
+            <label>Progression <input class="tl-progress" type="range" min="0" max="1" step="0.01" value="0"></label>
+        </div>
+    </section>
+
+    <!-- 3. stagger : décaler l'animation de chaque élément d'une sélection -->
+    <section>
+        <h2>3. stagger</h2>
+        <div class="dots">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <button class="play-stagger" type="button">Jouer</button>
+    </section>
+</body>
+</html>
